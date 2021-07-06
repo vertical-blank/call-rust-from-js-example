@@ -1,0 +1,15 @@
+[package]
+name = "rust-lib"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "foo"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+web-sys = { version = "0.3", features = ["console"] }
+wasm-bindgen = { version = "0.2", features = ["serde-serialize", "enable-interning"]}
+wasm-bindgen-futures = "0.4"
