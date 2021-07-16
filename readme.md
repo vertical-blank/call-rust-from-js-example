@@ -22,7 +22,7 @@ node index.js
 ```
 rustup target add wasm32-unknown-unknown
 cargo install wasm-pack 
-wasm-pack build --target nodejs --release --out-dir ./wasm
+wasm-pack build --target nodejs --release --out-dir ./wasm-target
 ```
 
 

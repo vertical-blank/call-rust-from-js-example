@@ -1,4 +1,5 @@
-const wasm = require("../rust-wasm/wasm/foo");
+const wasm = require("../rust/wasm/wasm-target/wasm");
 
-const hello = wasm.hello(10);
-console.log(hello);
+wasm.fibs(10);
+const fib = wasm.fib(100);
+console.log(fib);
