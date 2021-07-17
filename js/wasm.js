@@ -1,5 +1,5 @@
 const wasm = require("../rust/wasm/wasm-target/wasm");
 
-wasm.fibs(10);
-const fib = wasm.fib(100);
+const n = process.argv[2];
+const fib = wasm.fib(n);
 console.log(fib);

@@ -1,22 +1,12 @@
 extern crate fib;
 
+use std::env;
 use fib::fib as fib_impl;
 
-pub fn fibs(count: i32) -> bool {
-    if count < 0 {
-        println!("A negative count is not supported.");
-        return false;
-    }
-
-    for i in 0..count {
-        println!("{}:{}", i, fib_impl(i));
-    }
-
-    return true;
-}
-
 fn main() {
-    fibs(10);
-    let fib = fib_impl(100);
+    let args: Vec<String> = env::args().collect();
+
+    let n = &args[1].parse::<i32>().unwrap();
+    let fib = fib_impl(*n);
     println!("{}", fib);
 }
