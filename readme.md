@@ -35,18 +35,6 @@ cargo install cross
 ## Benchmark
 
 ```
-$ time node js/wasm.js 100
-354224848179261915075
-
-real    0m0.062s
-user    0m0.118s
-sys     0m0.000s
-$ time node js/wasm.js 100
-354224848179261915075
-
-real    0m0.060s
-user    0m0.104s
-sys     0m0.021s
 $ time node js/native.js 100
 354224848179261915075
 
@@ -59,6 +47,18 @@ $ time node js/native.js 100
 real    0m0.141s
 user    0m0.238s
 sys     0m0.030s
+$ time node js/wasm.js 100
+354224848179261915075
+
+real    0m0.062s
+user    0m0.118s
+sys     0m0.000s
+$ time node js/wasm.js 100
+354224848179261915075
+
+real    0m0.060s
+user    0m0.104s
+sys     0m0.021s
 $ time target/debug/runner 100
 354224848179261915075
 
@@ -71,6 +71,18 @@ $ time target/debug/runner 100
 real    0m0.002s
 user    0m0.002s
 sys     0m0.000s
+$ time node js/pure.js 100
+354224848179261915075n
+
+real    0m0.038s
+user    0m0.040s
+sys     0m0.001s
+$ time node js/pure.js 100
+354224848179261915075n
+
+real    0m0.039s
+user    0m0.031s
+sys     0m0.010s
 ```
 
 
